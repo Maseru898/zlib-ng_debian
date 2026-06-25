@@ -1,8 +1,10 @@
 #!/usr/bin/make -f
 %:
+	# This is not an upstream package, ignore all the nonsense and just make it work
 	true
 binary:
 	dh_prep
+	# Configure
 	cmake	-B build \
 		-G Ninja \
 		-DCMAKE_BUILD_TYPE=None \
@@ -11,7 +13,9 @@ binary:
 		-Wno-dev \
 		-DBUILD_SHARED_LIBS=ON \
 		-DWITH_GTEST=OFF
+	# Build
 	cmake --build build
+	# Install
 	DESTDIR=$(CURDIR)/debian/zlib-ng cmake --install build
 	dh_gencontrol
 	dh_md5sums
