@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+%:
+	true
+binary:
+	dh_prep
+	cmake	-B build \
+		-G Ninja \
+		-DCMAKE_BUILD_TYPE=None \
+		-DCMAKE_INSTALL_PREFIX=/usr \
+		-DCMAKE_INSTALL_LIBDIR=lib \
+		-Wno-dev \
+		-DBUILD_SHARED_LIBS=ON \
+		-DWITH_GTEST=OFF
+	cmake --build build
+	DESTDIR=$(CURDIR)/debian/zlib-ng cmake --install build
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb

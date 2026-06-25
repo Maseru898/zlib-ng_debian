@@ -1,0 +1,20 @@
+Source: zlib-ng
+Section: unstable
+Priority: optional
+Maintainer: Marcel Weissenbach <marcel.weissenbach@cybertrust.co.jp>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-cmake,
+ ninja-build,
+Standards-Version: 4.7.3
+Homepage: <insert the upstream URL, if relevant>
+Rules-Requires-Root: no
+
+Package: zlib-ng
+Section: unknown
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: zlib replacement with optimizations for "next generation" systems.

@@ -1,0 +1,6 @@
+zlib-ng (2.3.3-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Marcel Weissenbach <marcel.weissenbach@cybertrust.co.jp>  Thu, 25 Jun 2026 14:24:58 +0900
