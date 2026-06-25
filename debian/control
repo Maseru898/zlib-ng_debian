@@ -4,7 +4,6 @@ Priority: optional
 Maintainer: Marcel Weissenbach <marcel.weissenbach@cybertrust.co.jp>
 Build-Depends:
  debhelper-compat (= 13),
- dh-cmake,
  ninja-build,
 Standards-Version: 4.7.3
 Homepage: <insert the upstream URL, if relevant>
